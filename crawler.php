@@ -18,21 +18,21 @@ function get_usn($usn)
     $html = str_get_html($results);
     $rtt =array();
 
-       foreach($html->find('tr td') as $li)
+
+       foreach($html->find('td') as $li)
        {
-             $rtt=trim($li->outertext);
-              echo $rtt;
-              echo("\r\n\t");
-             
-       }
-for ($i=1;$i<5;$i++)
-{
+             $rtt=trim($li->innertext);
+             echo $rtt;
+             echo("<html><br></html>");
+
        
 }
 
 }
+
+
 $start_seq = "1BI15CS";
-for ($i=1;$i<2;$i++)
+for ($i=134;$i<142;$i++)
 {
 
     $j = strlen((string)$i);
